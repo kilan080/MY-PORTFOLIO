@@ -9,7 +9,9 @@ body {
     color: #fff;
     background-color: #000;
     padding-top: 30px;
+    padding: 0 120px;
 }
+
 .mines {
     display: flex;
     justify-content: space-between;
@@ -22,12 +24,14 @@ body {
     padding-right: 50px;
     position: relative;
 }
-.hii {
-    max-width: 650px;
-    font-size: 2.5rem;
+
+.hii h1{
+    max-width: 100%;
+    font-size: 4.5rem;
 }
 .pur {
     display: flex;
+    justify-content: space-between;
 }
 .greet p {
     font-size: 15px;
@@ -43,10 +47,10 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    padding: 0 120px;
+    gap: 40px;
 }
 .mage img {
-    width: 420px;
+    width: 100%;
     height: 500px;
     margin-top: -20px;
     opacity: 0.6;
@@ -64,7 +68,6 @@ header {
     flex-wrap: wrap;
     gap: 80px;
     margin-top: 15px;
-    padding: 0 120px;
 
 }
 .htm, .css, .jav, .boot, .rea, .aces {
@@ -76,7 +79,6 @@ header {
     justify-content: space-between;
     margin-top: 20px;
     align-items: center;
-    padding: 0 120px;
 
 }
 .span {
@@ -86,53 +88,48 @@ header {
  
 }
 .pictures {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
     margin-top: 20px;
-    padding: 0 120px;
 
 }
 .pictures img {
-    height: 300px;
-    width: 500px;
+    width: inherit;
+    height: inherit;
     opacity: 0.6;
     cursor: pointer;
 }
 .pictures img:hover {
     opacity: 1;
-    
 }
 
 .project {
-    width: 20rem;
-    height: 12rem;
-}
-.project img {
-    width: inherit;
-    height: inherit;
+    width: 100%;
 }
 footer {
     margin-top: 55px;
     background-color: grey;
-    padding: 0 120px;
 
 }
 .tact h3 {
     font-size: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
+    text-align: center;
 
 }
 .tact p {
-    max-width: 320px;
+    max-width: 500px
 }
 .boo {
+    padding: 0 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
+
 /* input {
     background-color: inherit;
     width: 200px;
@@ -148,14 +145,13 @@ footer {
 
 }
 input {
-    /* position: absolute; */
     border-color: #0051ff;
+    width: 100%;
+    border-radius: 3px;
+    height: 2rem;
     cursor: pointer;
 }
 label {
-    position: relative;
-    left: 10px;
-    top: 10px;
     color: #000;
     background: inherit;
     padding: 0px 5px;
@@ -167,27 +163,163 @@ input:focus + label {
     transform: translateY(-25px);
     color: #0051ff;
 }
+.put {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+.put div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-.put button {
+
+button {
     margin-top: 20px;
     width: 160px;
     height: 30px;
-    border-radius: 12px;
+    border-radius: 7px;
     border: none;
     opacity: 0.6;
     color: #fff;
     cursor: pointer;
 }
 
-.put button:hover {
+button:hover {
     color: #000;
     opacity: 1;
 }
-
-
 .net {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 20px;;
 }
+.net i:hover {
+    color: #000;
+    font-size: 2rem;
+    color: bisque;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+    .header {
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    .hii {
+        width: 400px;
+        position: absolute;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-top: 20px;
+
+    }
+     .mage {
+        /* position: relative; */
+        width: 300px;
+        /* margin-right: 100px; */
+        height: 80px;
+    }
+    .greet {
+
+    }
+    .greet p {
+        width: 300px;
+        margin-top: 350px;
+        font-size: 1rem;
+    }
+    .learns {
+        justify-content: center;
+        margin-top: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        margin-top: 15px;
+        margin: 0;
+    }
+    .pictures {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 0;
+    }
+
+
+    .boo {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .tact h3 {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 3.5rem;
+    }
+    .tact p {
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 20px;
+        max-width: 300px;
+    }
+    input {
+        border: none;
+    }
+    button {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+    }
+}
+@media screen and (max-width:430px) {
+    .mines {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 100px;
+    }
+    .pur {
+        display: flex;
+        flex-direction: column;  
+        width: 100%;
+    }
+    .hii h1 {
+        max-width: 150px
+        font-size: 2rem;
+    }
+    .mage {
+        height: 200px;
+        width: 100%;
+    }
+    .con {
+        margin-bottom: 30px;
+    }
+    .learns {
+        margin-top: 300px;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .twos {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .tact h3 {
+        font-size: 1.5rem;
+    }
+    .tact p {
+        font-size: 1rem;
+    }
+    .last {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
+
 
