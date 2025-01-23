@@ -41,7 +41,7 @@ body {
 .con {
     border-bottom: 3px solid green;
     width: 90px;
-    padding-top: 35px;
+    padding-top: 25px;
 
 }
 header {
@@ -59,9 +59,6 @@ header {
 }
 .mage img:hover {
     opacity: 1;
-
-}
-.bord {
 
 }
 .learns {
@@ -177,11 +174,9 @@ input:focus + label {
     flex-direction: column;
     gap: 1rem;
 }
-
-
 button {
     margin-top: 20px;
-    width: 160px;
+    width: 100%;
     height: 30px;
     border-radius: 7px;
     border: none;
@@ -189,7 +184,6 @@ button {
     color: #fff;
     cursor: pointer;
 }
-
 button:hover {
     color: #000;
     opacity: 1;
@@ -207,31 +201,30 @@ button:hover {
 }
 
 @media screen and (max-width:700px) {
-    .header {
-        padding: 0 60px;
+    body {
+        padding: 0 15px;
+    }
+    header {
+        padding: 0 40px;
         display: flex;
         flex-direction: column;
     }
     .hii {
-        width: 400px;
-        position: absolute;
+        /* width: 400px; */
+        width: 100%;
         font-weight: 500;
         font-size: 2rem;
-        margin-top: 20px;
 
     }
      .mage {
-        /* position: relative; */
         width: 300px;
-        /* margin-right: 100px; */
-        height: 80px;
+
     }
     .greet {
 
     }
     .greet p {
-        width: 300px;
-        margin-top: 350px;
+        max-width: 300px;
         font-size: 1rem;
     }
     .learns {
@@ -239,7 +232,7 @@ button:hover {
         margin-top: 250px;
         display: flex;
         flex-wrap: wrap;
-        gap: 60px;
+        gap: 35px;
         margin-top: 15px;
         margin: 0;
     }
@@ -277,7 +270,51 @@ button:hover {
 
     }
 }
+@media screen and (max-width:500px) {
+    body {
+        padding: 0px 20px;
+    }
+    header {
+
+    }
+    .mines {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .pur {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .greet {
+        max-width: 100%;
+        margin: 0;
+    }
+    .hii h1 {
+        font-size: 2.5rem;
+        max-width: 350px;
+    }
+    .learns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .con {
+        display: none;
+
+    }
+    footer {
+        padding: 0 20px;
+    }
+    .tact h3 {
+        font-size: 1.3rem;
+    }
+}
 @media screen and (max-width:430px) {
+    body {
+        padding: 0;
+    }
     .mines {
         display: flex;
         flex-direction: row;
@@ -290,8 +327,8 @@ button:hover {
         width: 100%;
     }
     .hii h1 {
-        max-width: 150px
-        font-size: 2rem;
+        width: 70%;
+        font-size: 2.5rem
     }
     .mage {
         height: 200px;
